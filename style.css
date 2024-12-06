@@ -1,244 +1,20 @@
-/* Basic Styling
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
-  margin: 0;
-  color: #333;
-  flex-direction: column;
-  padding: 20px;
-  overflow-x: hidden; 
-}
-
-
-.calculator {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 320px;
-  max-width: 100%;
-  border: 2px solid #ccc;
-  margin-bottom: 20px;
-}
-
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-button {
-  background-color: #f1f1f1;
-  padding: 12px;
-  font-size: 1.2rem;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  width: 60px;
-  margin: 5px;
-}
-
-button:hover {
-  background-color: #e0e0e0;
-}
-
-button.operator {
-  background-color: #f8c146;
-  color: #fff;
-}
-
-button.operator:hover {
-  background-color: #f4a10c;
-}
-
-button.equal {
-  background-color: #5f6368;
-  color: #fff;
-}
-
-button.equal:hover {
-  background-color: #3c3f45;
-}
-
-.btns{
-  
-    padding: 8px 0px;
-    font-size: 0.8rem;
-  
-}
-
-.display {
-  width: 93%;
-  height: 50px;
-  font-size: 1.8rem;
-  text-align: right;
-  padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  background-color: #f9f9f9;
-}
-
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-}
-
-.history {
-  margin-top: 20px;
-  background-color: #f9f9f9;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-}
-
-.history ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.history li {
-  padding: 5px;
-  background-color: #f1f1f1;
-  margin: 5px 0;
-  border-radius: 5px;
-}
-
-.history li:hover {
-  background-color: #e0e0e0;
-}
-
-
-.unit-converter {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 320px;
-  margin-top: 20px;
-  box-sizing: border-box;
-}
-
-.unit-converter h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.6rem;
-}
-
-.unit-converter div {
-  margin-bottom: 20px;
-}
-
-.unit-converter label {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-  display: block;
-}
-
-.unit-converter input {
-  padding: 10px;
-  width: 100%;
-  font-size: 1.2rem;
-  margin-top: 5px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-.unit-converter input:focus {
-  border-color: #f8c146;
-}
-
-.unit-converter button {
-  width: 100%;
-  padding: 10px;
-  font-size: 1.2rem;
-  background-color: #f8c146;
-  color: white;
-  border: 2px solid #f8c146;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 10px;
-}
-
-.unit-converter button:hover {
-  background-color: #f4a10c;
-}
-
-.unit-converter p {
-  margin-top: 10px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: center;
-  color: #333;
-}
-
-.back-arrow {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 1.5rem;
-  color: #333;
-  cursor: pointer;
-  transition: color 0.2s;
-  
-}
-
-.back-arrow:hover {
-  color: #f8c146;
-}
-
-@media (max-width: 600px) {
-  .calculator {
-    width: 90%;
-  }
-
-  .unit-converter {
-    width: 90%;
-    max-width: 90%;
-  }
-
-  .display {
-    font-size: 1.6rem;
-    padding: 15px;
-  }
-
-  button {
-    font-size: 1.2rem;
-    padding: 12px;
-  }
-} */
-
-
-
 /* Basic Styling */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center; /* Vertically center */
   height: 100vh;
   margin: 0;
   color: #333;
   flex-direction: column;
   padding: 20px;
-  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
-/* Calculator Styling */
-.calculator {
+/* Calculator & Unit Converter Styling */
+.calculator,
+.unit-converter {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -246,27 +22,44 @@ body {
   width: 320px;
   max-width: 100%;
   border: 2px solid #ccc;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Header section */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
+  gap: 43px; /* Adjusted gap for header */
+}
+
+.display {
+  width: 94%;
+  height: 60px;
+  font-size: 2rem;
+  text-align: right;
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 
 button {
   background-color: #f1f1f1;
-  padding: 12px;
-  font-size: 1.2rem;
   border: 2px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
+  font-size: 1.5rem;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  width: 60px;
-  margin: 5px;
+  transition: background-color 0.3s ease-in-out;
+  padding: 2px 25px;
 }
 
 button:hover {
@@ -275,7 +68,7 @@ button:hover {
 
 button.operator {
   background-color: #f8c146;
-  color: #fff;
+  color: white;
 }
 
 button.operator:hover {
@@ -284,157 +77,81 @@ button.operator:hover {
 
 button.equal {
   background-color: #5f6368;
-  color: #fff;
+  color: white;
+  grid-column: span 2; /* Spans across two columns */
 }
 
 button.equal:hover {
   background-color: #3c3f45;
 }
 
-.display {
-  width: 94%;
-  height: 50px;
-  font-size: 1.8rem;
-  text-align: right;
-  padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  background-color: #f9f9f9;
-}
-
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-}
-
+/* History Section Styling */
 .history {
   margin-top: 20px;
   background-color: #f9f9f9;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ddd;
+  max-height: 200px; /* Limit height for history */
+  overflow-y: auto; /* Enable scrolling if content exceeds max-height */
 }
 
-.history ul {
-  list-style-type: none;
-  padding: 0;
+.history-container {
+  max-height: 150px;
+  overflow-y: auto;
 }
 
 .history li {
-  padding: 5px;
-  background-color: #f1f1f1;
   margin: 5px 0;
+  padding: 5px;
+  background-color: #e0e0e0;
   border-radius: 5px;
 }
 
-.history li:hover {
-  background-color: #e0e0e0;
+.history li:last-child {
+  margin-bottom: 0;
 }
 
-
-
-/* Unit Converter Section */
-.unit-converter {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 282px;
-  max-width: 100%;
-  margin-top: 20px;
+.history h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #5f6368;
 }
 
-.unit-converter h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.6rem;
-}
-
+/* Unit Converter Section Styling */
 .unit-converter div {
   margin-bottom: 20px;
 }
 
-.unit-converter label {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-  display: block;
-}
-
-.unit-converter input {
-  padding: 10px;
-  width: 93%;
-  font-size: 1.2rem;
-  margin-top: 5px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-.unit-converter input:focus {
-  border-color: #f8c146;
-}
-
 .unit-converter button {
   width: 100%;
-  padding: 10px;
-  font-size: 1.2rem;
-  background-color: #f8c146;
+  background-color: #5f6368;
   color: white;
-  border: 2px solid #f8c146;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
   margin-top: 10px;
+  font-size: 1.2rem;
+  padding: 15px;
 }
 
 .unit-converter button:hover {
-  background-color: #f4a10c;
+  background-color: #3c3f45;
 }
 
-.unit-converter p {
-  margin-top: 10px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: center;
-  color: #333;
-}
-
-/* Back Arrow */
+/* Back Arrow for Unit Converter */
 .back-arrow {
-  position: absolute;
-  top: 10px;
-  left: 10px;
   font-size: 1.5rem;
-  color: #333;
-  cursor: pointer;
-  transition: color 0.2s;
-  padding: 5px 24px;
-}
-
-.back-arrow:hover {
   color: #f8c146;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-  .calculator {
-    width: 90%;
-  }
-
-  .unit-converter {
-    width: 90%;
-  }
-
-  .display {
-    font-size: 1.6rem;
-    padding: 15px;
-  }
-
-  button {
-    font-size: 1.2rem;
-    padding: 12px;
-  }
+/* Ensure sections don't collapse */
+#calculatorSection,
+#unitConverterSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 300px;
+  margin: 0 auto;
+  height: 500px;
 }
