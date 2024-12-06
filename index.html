@@ -7,67 +7,64 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="calculator">
+  <!-- Calculator Section -->
+  <div id="calculatorSection" class="calculator">
     <div class="header">
-      <h1>Calculator</h1>
-      <button class="btns" style="padding: 4px 1px;font-size: 0.8rem;" onclick="toggleUnitConverter()">Unit Converter</button>
+      <h2>Calculator</h2>
+      <button onclick="toggleUnitConverter()">Unit Converter</button>
     </div>
-
-    <!-- Calculator section -->
-    <div id="calculatorSection" class="calculator-section">
-      <input type="text" id="display" class="display" disabled />
-      <div class="buttons">
-        <button class="btn" onclick="appendToDisplay('1')">1</button>
-        <button class="btn" onclick="appendToDisplay('2')">2</button>
-        <button class="btn" onclick="appendToDisplay('3')">3</button>
-        <button class="btn operator" onclick="appendToDisplay('+')">+</button>
-
-        <button class="btn" onclick="appendToDisplay('4')">4</button>
-        <button class="btn" onclick="appendToDisplay('5')">5</button>
-        <button class="btn" onclick="appendToDisplay('6')">6</button>
-        <button class="btn operator" onclick="appendToDisplay('-')">-</button>
-
-        <button class="btn" onclick="appendToDisplay('7')">7</button>
-        <button class="btn" onclick="appendToDisplay('8')">8</button>
-        <button class="btn" onclick="appendToDisplay('9')">9</button>
-        <button class="btn operator" onclick="appendToDisplay('*')">*</button>
-
-        <button class="btn" onclick="appendToDisplay('0')">0</button>
-        <button class="btn operator" onclick="appendToDisplay('.')">.</button>
-        <button class="btn operator" onclick="clearDisplay()">C</button>
-        <button class="btn operator" onclick="appendToDisplay('/')">/</button>
-
-        <button class="btn equal" onclick="calculate()">=</button>
-      </div>
-
-      <div id="history" class="history">
-        <h2>History</h2>
-        <ul id="historyList"></ul>
-      </div>
+    <input id="display" class="display" type="text" placeholder="0" readonly />
+    <div class="buttons">
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <button onclick="appendToDisplay('3')">3</button>
+      <button class="operator" onclick="appendToDisplay('+')">+</button>
+      <button onclick="appendToDisplay('4')">4</button>
+      <button onclick="appendToDisplay('5')">5</button>
+      <button onclick="appendToDisplay('6')">6</button>
+      <button class="operator" onclick="appendToDisplay('-')">-</button>
+      <button onclick="appendToDisplay('7')">7</button>
+      <button onclick="appendToDisplay('8')">8</button>
+      <button onclick="appendToDisplay('9')">9</button>
+      <button class="operator" onclick="appendToDisplay('*')">*</button>
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="appendToDisplay('0')">0</button>
+      <button class="operator" onclick="appendToDisplay('/')">/</button>
+      <!-- Adding Percentage Button -->
+      <button onclick="appendToDisplay('%')">%</button>
+      <button class="equal" onclick="calculate()">=</button>
+      <!-- Adding Bracket Buttons -->
+      <button onclick="appendToDisplay('(')">(</button>
+      <button onclick="appendToDisplay(')')">)</button>
+      
     </div>
+    <div id="history" class="history">
+      <h3>History</h3>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
 
-    <!-- Unit Converter Section -->
-    <div id="unitConverterSection" class="unit-converter" style="display: none;">
-      <span onclick="goBackToCalculator()" class="back-arrow">&#8592; Back</span> <!-- Back arrow -->
-      <h2>Unit Converter</h2>
-      <div>
-        <label for="area">Area:</label>
-        <input type="number" id="areaInput" placeholder="Enter area" />
-        <button onclick="convertArea()">Convert Area</button>
-        <p id="areaResult"></p>
-      </div>
-      <div>
-        <label for="length">Length:</label>
-        <input type="number" id="lengthInput" placeholder="Enter length" />
-        <button onclick="convertLength()">Convert Length</button>
-        <p id="lengthResult"></p>
-      </div>
-      <div>
-        <label for="temperature">Temperature:</label>
-        <input type="number" id="tempInput" placeholder="Enter temperature" />
-        <button onclick="convertTemperature()">Convert Temperature</button>
-        <p id="tempResult"></p>
-      </div>
+  <!-- Unit Converter Section -->
+  <div id="unitConverterSection" class="unit-converter" style="display: none;">
+    <div class="back-arrow" onclick="goBackToCalculator()">&#8592; Back</div>
+    <h2>Unit Converter</h2>
+    <div>
+      <label for="areaInput">Area (sq. feet):</label>
+      <input id="areaInput" type="number" placeholder="Enter area" />
+      <button onclick="convertArea()">Convert</button>
+      <p id="areaResult"></p>
+    </div>
+    <div>
+      <label for="lengthInput">Length (feet):</label>
+      <input id="lengthInput" type="number" placeholder="Enter length" />
+      <button onclick="convertLength()">Convert</button>
+      <p id="lengthResult"></p>
+    </div>
+    <div>
+      <label for="tempInput">Temperature (°F):</label>
+      <input id="tempInput" type="number" placeholder="Enter temperature" />
+      <button onclick="convertTemperature()">Convert</button>
+      <p id="tempResult"></p>
     </div>
   </div>
 
